@@ -4,11 +4,11 @@ driver = webdriver.Chrome()
 driver.get('some_URL')
 
 
-def scroll():
-    return 'next 10'
+# def scroll():
+#     return 'next 10'
 
-def is_displayed():
-    return True if 'some condition' else False
+# def is_displayed():
+#     return True if 'some condition' else False
 
 def scroll_to(item):
     if is_displayed is True: # if element displayed so we can get it
