@@ -1,5 +1,6 @@
 #First Task
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 driver = webdriver.Chrome()
 driver.get('some_URL')
 
@@ -12,7 +13,9 @@ driver.get('some_URL')
 
 def scroll_to(item):
     if is_displayed is True: # if element displayed so we can get it
-        driver.find_elemet_by_id(f'{item}') # or it can be found by css selector for example
+        our_element = driver.find_elemet_by_id(f'{item}') # or it can be found by css selector for example
+        actions = ActionChains(driver)
+        actions.move_to_element(our_element).perform()
         return True
     else:
         return False
